@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
 
     axios
-      .post('/send-email', { name, email, message })
+      .post('https://nodejs-test-d2uo.onrender.com/send-email', { name, email, message })
       .then((response) => {
         setStatus('Email sent, I\'ll get back to you. ');
         setName('');
