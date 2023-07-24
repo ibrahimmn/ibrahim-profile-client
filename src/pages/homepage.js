@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
+import GoToTop from '../components/gototop';
 
 
 
@@ -94,6 +95,8 @@ return (
         </Col>
       </Row>
     </Container>
+
+    <GoToTop />
     </>
 )};
 

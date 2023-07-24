@@ -1,7 +1,7 @@
 
 import './assets/App.css';
 import './assets/aboutme.css';
-
+ 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion, useScroll } from "framer-motion";
@@ -12,10 +12,14 @@ import Contact from './pages/contact';
 import Aboutme from './pages/aboutme';
 import Footer from './components/footer';
 import NotFound from './pages/error404';
+import ScrollToTop from './components/scrolltotop';
  
 
 function App() {
   const { scrollYProgress } = useScroll();
+ 
+
+
   return (
     <BrowserRouter>
     <div className="App">
@@ -33,7 +37,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
-      
+      <ScrollToTop />
       <div id="footer">
             <Footer />
       </div>

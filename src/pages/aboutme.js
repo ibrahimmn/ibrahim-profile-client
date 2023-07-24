@@ -12,6 +12,7 @@ import {TbApi} from'react-icons/tb';
 import {SiAuth0} from 'react-icons/si';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
+import GoToTop from '../components/gototop';
  
 
  
@@ -375,7 +376,7 @@ const Aboutme = () => {
         </Col>
       </Row>
     </Container>
-
+<GoToTop />
     </>
 )};
 

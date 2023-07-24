@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from "axios";
 import { Link } from "react-router-dom";
+import GoToTop from "../components/gototop";
 
 
 
@@ -48,8 +49,8 @@ const Contact = () => {
      <Container fluid>
       <Row className="d-flex ">
         <Col md={4} className="d-flex flex-column justify-content-center text-center">
-          <h3><strong>Location:</strong> Istanbul, Turkey</h3><br></br>
-          <h3><strong>Email:</strong><Link to="mailto:Ibrahim.mneimneh3@gmail.com"> Ibrahim.mneimneh3@gmail.com</Link></h3><br></br><br></br>
+          <h3><strong>Location:</strong> </h3><h3>Istanbul, Turkey</h3><br></br>
+          <h3><strong>Email:</strong></h3><h3><Link to="mailto:Ibrahim.mneimneh3@gmail.com"> Ibrahim.mneimneh3@gmail.com</Link></h3><br></br><br></br>
         
         </Col>
 
@@ -105,7 +106,7 @@ const Contact = () => {
      </Container> <br></br> <br></br> 
 
  
-
+     <GoToTop />
         </>
   );
 };
