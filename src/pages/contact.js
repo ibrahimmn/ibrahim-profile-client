@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import axios from "axios";
 import { Link } from "react-router-dom";
 import GoToTop from "../components/gototop";
-
+import Spinner from 'react-bootstrap/Spinner';
 
 
 const Contact = () => {
@@ -15,7 +15,10 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
 
+  const [loading, setloading] = useState(false);
+
   const handleSubmit = (e) => {
+    setloading(true)
     e.preventDefault();
 
     axios
@@ -30,6 +33,8 @@ const Contact = () => {
         setStatus('Error: Unable to send the email.');
         console.error(error);
       });
+
+      setloading(false)
   };
  
 
@@ -93,9 +98,23 @@ const Contact = () => {
             </Form.Group>
 
 
+            
+            {
+              loading ?
+
+              <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+
+                  :
+
+                  
             <Button variant="dark" type="submit">
               Send Message
             </Button>
+             }
+
+
           </Form><br></br> 
           <p>{status}</p>
         
