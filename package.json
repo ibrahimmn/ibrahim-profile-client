@@ -28,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://nodejs-test-d2uo.onrender.com",
+   "proxy": "https://nodejs-test-d2uo.onrender.com", 
+  
   "eslintConfig": {
     "extends": [
       "react-app",
