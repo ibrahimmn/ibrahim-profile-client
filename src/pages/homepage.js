@@ -62,7 +62,7 @@ return (
           </h3><br></br><br></br>
           <Row className=' d-flex justify-content-center align-items-center  '>
             <Col md={6}>
-            <button className="button-81 " onClick={() => navigate("/contact")}>
+            <button className="button-81 " onClick={() => navigate("/aboutibrahim")}>
             About me 
             </button>
             </Col>
