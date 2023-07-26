@@ -18,23 +18,27 @@ const Contact = () => {
   const [loading, setloading] = useState(false);
 
   const handleSubmit = (e) => {
-    setloading(true)
+     
     e.preventDefault();
 
     axios
-      .post('https://nodejs-test-d2uo.onrender.com/send-email', { name, email, message })
+      .post('https://nodejs-test-d2uo.onrender.com/api/send-email', { name, email, message })
       .then((response) => {
+        setloading(true);
         setStatus('Email sent, I\'ll get back to you. ');
         setName('');
         setEmail('');
         setMessage('');
+          
       })
       .catch((error) => {
+        setloading(true);
         setStatus('Error: Unable to send the email.');
+        setloading(false);
         console.error(error);
       });
-
-      setloading(false)
+      setloading(false);
+      
   };
  
 
